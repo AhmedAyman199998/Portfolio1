@@ -1,0 +1,127 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Manage Profile and Projects</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+    <link href="https://fonts.googleapis.com/css2?family=Orbitron:wght@400;700&family=Roboto:wght@300;400;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <header>
+        <div class="container">
+            <div class="profile">
+                <img src="images/me.png" alt="Ahmed Ayman" class="profile-img">
+                <h1>Ahmed Ayman</h1>
+                <p class="tagline">Data Analyst | Futuristic Thinker</p>
+            </div>
+            <nav>
+                <ul>
+                    <li><a href="index.html" class="nav-button">Home</a></li>
+                    <li><a href="manage.html" class="nav-button">Manage Projects</a></li>
+                </ul>
+            </nav>
+        </div>
+    </header>
+
+    <section id="manage-profile" class="section">
+        <div class="container">
+            <h2>Manage Profile</h2>
+            <div class="manage-section">
+                <h3>Edit Profile Information</h3>
+                <form id="edit-profile-form">
+                    <label for="profile-image">Upload New Profile Image:</label>
+                    <input type="file" id="profile-image" name="profile-image" accept="image/*">
+
+                    <label for="profile-name">New Name:</label>
+                    <input type="text" id="profile-name" name="profile-name">
+
+                    <label for="profile-tagline">New Tagline:</label>
+                    <input type="text" id="profile-tagline" name="profile-tagline">
+
+                    <label for="profile-phone">New Phone Number:</label>
+                    <input type="text" id="profile-phone" name="profile-phone">
+
+                    <label for="profile-email">New Email:</label>
+                    <input type="email" id="profile-email" name="profile-email">
+
+                    <label for="profile-linkedin">New LinkedIn URL:</label>
+                    <input type="url" id="profile-linkedin" name="profile-linkedin">
+
+                    <label for="profile-facebook">New Facebook URL:</label>
+                    <input type="url" id="profile-facebook" name="profile-facebook">
+
+                    <button type="submit">Update Profile</button>
+                </form>
+                <div id="profile-message"></div>
+            </div>
+        </div>
+    </section>
+
+    <section id="manage-projects" class="section">
+        <div class="container">
+            <h2>Manage Projects</h2>
+            <div class="manage-section">
+                <h3>Add New Project</h3>
+                <form id="add-project-form">
+                    <label for="project-name">Project Name:</label>
+                    <input type="text" id="project-name" name="project-name" required>
+
+                    <label for="project-image">Upload Image:</label>
+                    <input type="file" id="project-image" name="project-image" accept="image/*" required>
+
+                    <label for="project-link">Project Link:</label>
+                    <input type="url" id="project-link" name="project-link" required>
+
+                    <button type="submit">Add Project</button>
+                </form>
+                <div id="add-message"></div>
+            </div>
+
+            <div class="manage-section">
+                <h3>Delete Project</h3>
+                <form id="delete-project-form">
+                    <label for="delete-project-name">Select Project:</label>
+                    <select id="delete-project-name" name="delete-project-name" required>
+                        <option value="">-- Select a Project --</option>
+                    </select>
+
+                    <button type="submit">Delete Project</button>
+                </form>
+                <div id="delete-message"></div>
+            </div>
+
+            <div class="manage-section">
+                <h3>Edit Project</h3>
+                <form id="edit-project-form">
+                    <label for="edit-project-name">Select Project:</label>
+                    <select id="edit-project-name" name="edit-project-name" required>
+                        <option value="">-- Select a Project --</option>
+                    </select>
+
+                    <label for="new-project-name">New Project Name:</label>
+                    <input type="text" id="new-project-name" name="new-project-name">
+
+                    <label for="new-project-image">Upload New Image:</label>
+                    <input type="file" id="new-project-image" name="new-project-image" accept="image/*">
+
+                    <label for="new-project-link">New Project Link:</label>
+                    <input type="url" id="new-project-link" name="new-project-link">
+
+                    <button type="submit">Update Project</button>
+                </form>
+                <div id="edit-message"></div>
+            </div>
+        </div>
+    </section>
+
+    <footer>
+        <div class="container">
+            <p>© 2025 Ahmed Ayman. All Rights Reserved.</p>
+        </div>
+    </footer>
+
+    <script src="scripts/main.js"></script>
+</body>
+</html>
